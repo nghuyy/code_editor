@@ -173,7 +173,6 @@ class _CodeEditorState extends State<CodeEditor> {
     Container buildNavbar() {
       return Container(
         width: double.infinity,
-        height: 60,
         decoration: BoxDecoration(
           color: opt?.editorColor,
           border: Border(
@@ -295,14 +294,6 @@ class _CodeEditorState extends State<CodeEditor> {
           icon: FontAwesomeIcons.indent,
         ),
         ToolButton(
-          press: () => insertIntoTextField("<"),
-          icon: FontAwesomeIcons.chevronLeft,
-        ),
-        ToolButton(
-          press: () => insertIntoTextField(">"),
-          icon: FontAwesomeIcons.chevronRight,
-        ),
-        ToolButton(
           press: () => insertIntoTextField('""', diff: -1),
           icon: FontAwesomeIcons.quoteLeft,
         ),
@@ -325,27 +316,7 @@ class _CodeEditorState extends State<CodeEditor> {
         ToolButton(
           press: () => insertIntoTextField('[]', diff: -1),
           symbol: "[]",
-        ),
-        ToolButton(
-          press: () => insertIntoTextField("-"),
-          icon: FontAwesomeIcons.minus,
-        ),
-        ToolButton(
-          press: () => insertIntoTextField("="),
-          icon: FontAwesomeIcons.equals,
-        ),
-        ToolButton(
-          press: () => insertIntoTextField("+"),
-          icon: FontAwesomeIcons.plus,
-        ),
-        ToolButton(
-          press: () => insertIntoTextField("/"),
-          icon: FontAwesomeIcons.divide,
-        ),
-        ToolButton(
-          press: () => insertIntoTextField("*"),
-          icon: FontAwesomeIcons.times,
-        ),
+        )
       ];
 
       return Container(
